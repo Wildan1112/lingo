@@ -37,7 +37,7 @@ export const Sidebar = ({ className }: Props) => {
           />
         ))}
       </div>
-      <div className="lg:mt-56 p-4">
+      <div className=" p-4">
         <ClerkLoading>
           <Loader className="h-5 w-5 text-muted-foreground animate-spin" />
         </ClerkLoading>
