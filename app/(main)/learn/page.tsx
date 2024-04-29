@@ -1,17 +1,17 @@
 import { FeedWrapper } from "@/components/feed-wrapper";
 import { StickyWrapper } from "@/components/sticky-wrapper";
-import { UserProgress } from "@/components/user-progress";
 import { Header } from "./header";
+import { UserProgress } from "@/components/user-progress";
 
 const LearnPage = () => {
   return (
-    <div className="flex flex-row-reverse px-6 gap-12">
+    <div className="flex flex-row-reverse gap-12 px-6">
       <StickyWrapper>
         <UserProgress
           activeCourse={{ title: "Indonesia", imageSrc: "/ID.svg" }}
-          hearts={3}
+          hearts={5}
           points={100}
-          hasActiveSubscription={true}
+          hasActiveSubscription={false}
         />
       </StickyWrapper>
       <FeedWrapper>
