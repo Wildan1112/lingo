@@ -2,14 +2,14 @@ import { cn } from "@/lib/utils";
 import { Check } from "lucide-react";
 import Image from "next/image";
 
-interface Props {
+type Props = {
   id: number;
   title: string;
   imageSrc: string;
   onClick: (id: number) => void;
   disabled?: boolean;
   active?: boolean;
-}
+};
 
 export const Card = ({
   id,
