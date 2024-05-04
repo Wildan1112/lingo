@@ -1,16 +1,16 @@
 import { cn } from "@/lib/utils";
 import { Check } from "lucide-react";
 import Image from "next/image";
-import { PropsWithRef } from "react";
 
-type Props = {
+interface Props {
   id: number;
   title: string;
   imageSrc: string;
   onClick: (id: number) => void;
   disabled?: boolean;
   active?: boolean;
-};
+}
+
 export const Card = ({
   id,
   title,

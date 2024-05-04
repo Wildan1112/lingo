@@ -3,10 +3,10 @@
 import { courses } from "@/db/schema";
 import { Card } from "./card";
 
-type Props = {
+interface Props {
   courses: (typeof courses.$inferSelect)[];
   activeCourseId: number;
-};
+}
 
 export const ListCourses = ({ courses, activeCourseId }: Props) => {
   return (
