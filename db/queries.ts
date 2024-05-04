@@ -1,8 +1,9 @@
-import { cache } from "react";
 import db from "./drizzle";
 
+import { cache } from "react";
+
 export const getCourses = cache(async () => {
-  const data = await db.query.courses.findMany();
+  const data = db.query.courses.findMany();
 
   return data;
 });
