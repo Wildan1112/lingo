@@ -1,9 +1,10 @@
 import { redirect } from "next/navigation";
 
-import { FeedWrapper } from "@/components/feed-wrapper";
 import { StickyWrapper } from "@/components/sticky-wrapper";
-import { Header } from "./header";
 import { UserProgress } from "@/components/user-progress";
+import { FeedWrapper } from "@/components/feed-wrapper";
+import { Header } from "./header";
+
 import { getUserProgress } from "@/db/queries";
 
 const LearnPage = async () => {
