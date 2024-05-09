@@ -31,7 +31,7 @@ export const upsertUserProgress = async (courseId: number) => {
   if (existingUserProgress) {
     await db.update(userProgress).set({
       activeCourseId: courseId,
-      userName: user.username || "User",
+      userName: user.firstName || "User",
       userImageSrc: user.imageUrl || "/mascot.svg",
     });
 

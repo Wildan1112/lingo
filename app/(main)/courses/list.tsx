@@ -1,21 +1,14 @@
 "use client";
 
+import { upsertUserProgress } from "@/actions/user-progress";
+import { courses, userProgress } from "@/db/schema";
 import { useRouter } from "next/navigation";
 import { useTransition } from "react";
-
-<<<<<<< HEAD
-type Props = {
-  courses: (typeof courses.$inferSelect)[];
-  activeCourseId: number;
-=======
 import { Card } from "./card";
-import { courses, userProgress } from "@/db/schema";
-import { upsertUserProgress } from "@/actions/user-progress";
 
 type Props = {
   courses: (typeof courses.$inferSelect)[];
   activeCourseId?: typeof userProgress.$inferSelect.activeCourseId;
->>>>>>> 4-User_progress
 };
 
 export const ListCourses = ({ courses, activeCourseId }: Props) => {
