@@ -27,7 +27,7 @@ const main = async () => {
         id: 1,
         courseId: 5, // Spanish
         title: "Unit 1",
-        description: "Learn the basics of Indonesian",
+        description: "Learn the basics of Spanish",
         order: 1,
       },
     ]);
