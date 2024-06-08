@@ -7,8 +7,14 @@ import { ClerkProvider } from "@clerk/nextjs";
 const font = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Lingo",
+  title: {
+    default: "Lingo",
+    template: "Lingo | %s",
+  },
   description: "Learn Languages by Uye",
+  icons: {
+    icon: "/mascot.svg",
+  }
 };
 
 export default function RootLayout({
