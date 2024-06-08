@@ -6,6 +6,11 @@ import { FeedWrapper } from "@/components/feed-wrapper";
 import { Header } from "./header";
 
 import { getUnits, getUserProgress } from "@/db/queries";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Learn',
+}
 
 const LearnPage = async () => {
   const userProgressData = getUserProgress();
