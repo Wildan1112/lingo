@@ -7,6 +7,7 @@ import { Header } from "./header";
 
 import { getUnits, getUserProgress } from "@/db/queries";
 import { Metadata } from "next";
+import { Unit } from "./unit";
 
 export const metadata: Metadata = {
   title: 'Learn',
@@ -38,7 +39,17 @@ const LearnPage = async () => {
       <FeedWrapper>
         <Header title={userProgress.activeCourse.title} />
         {units.map((unit) => (
-          <div>{JSON.stringify(unit)}</div>
+          <div key={unit.id} className="mb-10">
+            <Unit 
+              id={unit.id}
+              title={unit.title}
+              description={unit.description} 
+              order={unit.order}
+              lessons={unit.lessons}
+              activeLesson={undefined}
+              activeLessonPercentage={0}
+            />
+          </div>
         ))}
       </FeedWrapper>
     </div>
