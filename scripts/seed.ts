@@ -36,7 +36,7 @@ const main = async () => {
       {
         id: 1,
         unitId: 1, // Unit 1 (Learn the Basics)
-        title: "Nouns",
+        title: "Verbs",
         order: 1,
       },
       {
@@ -44,6 +44,24 @@ const main = async () => {
         unitId: 1, // Unit 1 (Learn the Basics)
         title: "Verbs",
         order: 2,
+      },
+      {
+        id: 3,
+        unitId: 1, // Unit 1 (Learn the Basics)
+        title: "Verbs",
+        order: 3,
+      },
+      {
+        id: 4,
+        unitId: 1, // Unit 1 (Learn the Basics)
+        title: "Verbs",
+        order: 4,
+      },
+      {
+        id: 5,
+        unitId: 1, // Unit 1 (Learn the Basics)
+        title: "Verbs",
+        order: 5,
       },
     ]);
 
