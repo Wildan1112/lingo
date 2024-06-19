@@ -5,7 +5,13 @@ import { UserProgress } from "@/components/user-progress";
 import { FeedWrapper } from "@/components/feed-wrapper";
 import { Header } from "./header";
 
-import { getUnits, getUserProgress } from "@/db/queries";
+import { lessons, units as unitsSchema } from "@/db/schema";
+import {
+  getCoursesProgress,
+  getLessonPercentage,
+  getUnits,
+  getUserProgress
+} from "@/db/queries";
 import { Metadata } from "next";
 import { Unit } from "./unit";
 
@@ -16,14 +22,26 @@ export const metadata: Metadata = {
 const LearnPage = async () => {
   const userProgressData = getUserProgress();
   const unitsData = getUnits();
+  const courseProgressData = getCoursesProgress()
+  const lessonPercentageData = getLessonPercentage()
 
-  const [userProgress, units] = await Promise.all([
+  const [
+    userProgress,
+    units,
+    courseProgress,
+    lessonPercentage
+  ] = await Promise.all([
     userProgressData,
     unitsData,
+    courseProgressData,
+    lessonPercentageData
   ]);
 
   if (!userProgress || !userProgress.activeCourse) {
     redirect("/courses");
+  }
+  if (!courseProgress) {
+    redirect("/courses")
   }
 
   return (
@@ -40,14 +58,17 @@ const LearnPage = async () => {
         <Header title={userProgress.activeCourse.title} />
         {units.map((unit) => (
           <div key={unit.id} className="mb-10">
-            <Unit 
+            <Unit
               id={unit.id}
               title={unit.title}
-              description={unit.description} 
+              description={unit.description}
               order={unit.order}
               lessons={unit.lessons}
-              activeLesson={undefined}
-              activeLessonPercentage={0}
+              activeLesson={courseProgress.activeLesson}
+              // activeLesson={courseProgress.activeLesson as typeof lessons.$inferSelect & {
+              //   unit: typeof unitsSchema.$inferSelect;
+              // } | undefined}
+              activeLessonPercentage={lessonPercentage}
             />
           </div>
         ))}
