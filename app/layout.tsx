@@ -12,7 +12,7 @@ const font = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: {
     default: "Lingo",
-    template: "Lingo | %s",
+    template: "Lingo - %s",
   },
   description: "Learn Languages by Uye",
   icons: {
