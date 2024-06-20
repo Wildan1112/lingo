@@ -6,7 +6,7 @@ type ExitModalState = {
   close: () => void;
 };
 
-export const useExitModel = create<ExitModalState>((set: any) => ({
+export const useExitModal = create<ExitModalState>((set) => ({
   isOpen: false,
   open: () => set({ isOpen: true }),
   close: () => set({ isOpen: false }),

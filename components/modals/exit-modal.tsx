@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog'
-import { useExitModel } from '@/store/use-exit-modal'
+import { useExitModal } from '@/store/use-exit-modal'
 import Image from 'next/image'
 import { Button } from '../ui/button'
 
@@ -12,7 +12,7 @@ export const ExitModal = () => {
   const router = useRouter()
   const [isClient, setIsClient] = useState<boolean>(false)
 
-  const { isOpen, close } = useExitModel()
+  const { isOpen, close } = useExitModal()
 
   useEffect(() => setIsClient(true), [])
 
