@@ -1,11 +1,11 @@
 'use client'
 
+import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { useExitModal } from '@/store/use-exit-modal'
-import Image from 'next/image'
 import { Button } from '../ui/button'
 
 export const ExitModal = () => {
