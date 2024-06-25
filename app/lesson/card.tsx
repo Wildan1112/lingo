@@ -47,6 +47,26 @@ export const Card = ({
           />
         </div>
       )}
+      <div className={cn("flex justify-between items-center",
+        type === "ASSIST" && "flex row-reverse"
+      )}>
+        {type === "ASSIST" && <div />}
+        <p className={cn("text-neutral-600 text-sm lg:text-base",
+          selected && "text-sky-500",
+          selected && status === "correct" && "text-green-500",
+          selected && status === "wrong" && "text-rose-500",
+        )}>
+          {text}
+        </p>
+        <div className={cn("lg:w-[30px] lg:h-[30px] w-[20px] h-[20px] flex justify-center items-center border-2 text-neutral-400 lg:text-base text-xs font-semibold rounded-lg",
+          selected && "border-sky-300 text-sky-500 ",
+          selected && status === "correct" && "border-green-300 text-green-500",
+          selected && status === "wrong" && "border-rose-300 text-rose-500",
+        )}>
+          {shortcut}
+        </div>
+
+      </div>
     </div>
   )
 }
