@@ -23,7 +23,6 @@ export const QuestionBubble = ({ question }: Props) => {
       />
 
       <div className="relative px-4 py-2 border-2 rounded-xl text-sm lg:text-base">
-
         {question}
         <div className="absolute w-0 h-0 -left-3 top-1/2 border-x-8 border-t-8 border-x-transparent transform -translate-y-1/2 rotate-90"></div>
       </div>
