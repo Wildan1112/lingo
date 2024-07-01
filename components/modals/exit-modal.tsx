@@ -35,7 +35,7 @@ export const ExitModal = () => {
             Wait, don&apos;t go!
           </DialogTitle>
           <DialogDescription className="text-center text-base">
-            Are you sure to end this session ?
+            Are you sure to end the session?
           </DialogDescription>
         </DialogHeader>
 
